@@ -34,3 +34,11 @@ pyecharts==1.9.1
 streamlit==1.10.0
 streamlit_echarts==0.4.0
 ```
+
+### 4. Miembros del equipo
+- Lapadula, Gianluca
+- Advincula, Luis
+- Medina, Magaly
+
+### 5. Dashboard
+""")
