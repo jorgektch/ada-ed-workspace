@@ -1,3 +1,4 @@
 import streamlit as st
 
-st.write(f"Esta es la semana 02")
+def ejecutar_semana_02():
+  st.write(f"Esta la semana 02")
