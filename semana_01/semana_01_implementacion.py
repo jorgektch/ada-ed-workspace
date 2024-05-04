@@ -2,4 +2,8 @@ import streamlit as st
 
 def ejecutar_semana_01_implementacion():
   st.subheader("Implementación")
-  st.code("#include <iostream>")
+
+  code = '''def hello():
+    print("Hello, Streamlit!")'''
+  st.code(code, language='python')
+
