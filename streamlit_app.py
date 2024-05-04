@@ -17,9 +17,10 @@ add_selectbox = st.sidebar.selectbox(
     index = default_ix,
 )
 
-# Using "with" notation
-with st.sidebar:
-    add_radio = st.radio(
-        "Choose a shipping method",
-        ("Standard (5-15 days)", "Express (2-5 days)")
-    )
+values2 = ['Select', 10, 15, 20, 25, 30]
+default_ix2 = values.index(10)
+if values2 == 'Select':
+    st.warning("Choose the integers from the list in the dropdown")
+else:
+    components = st.selectbox("Select the components below⤵️", values2, 
+    index=default_ix2)
