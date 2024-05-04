@@ -1,9 +1,20 @@
 import streamlit as st
 
 # Using object notation
+selectbox_values = ['<select>',
+          "Semana 01",
+          "Semana 02",
+          "Semana 03",
+          "Semana 04",
+          "Semana 05",
+         ]
+
+default_ix = selectbox_values.index("Semana 05")
+
 add_selectbox = st.sidebar.selectbox(
     "How would you like to be contacted?",
-    ("Email", "Home phone", "Mobile phone")
+    selectbox_values,
+    index = default_ix,
 )
 
 # Using "with" notation
