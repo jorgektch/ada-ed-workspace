@@ -1,3 +1,5 @@
+import streamlit as st
+
 # 0. TITULO Y DESCRIPCION DEL PROYECTO
 st.title('Análisis de casos positivos registrados en Perú')
 st.markdown("""
