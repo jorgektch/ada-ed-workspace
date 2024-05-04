@@ -1,11 +1,11 @@
 import streamlit as st
 import subprocess
-from inicio import *
+from inicio.inicio import *
 from semana_01.semana_01 import *
-from semana_02 import *
-from semana_03 import *
-from semana_04 import *
-from semana_05 import *
+from semana_02.semana_02 import *
+from semana_03.semana_03 import *
+from semana_04.semana_04 import *
+from semana_05.semana_05 import *
 
 # Aside menu
 selectbox_values = ["Inicio",
