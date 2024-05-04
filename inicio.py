@@ -1,4 +1,4 @@
 import streamlit as st
 
-def semana_01():
+def ejecutar_innicio():
   st.write(f"Este es el inicio")
