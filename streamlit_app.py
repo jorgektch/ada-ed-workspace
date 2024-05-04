@@ -21,7 +21,7 @@ add_selectbox = st.sidebar.selectbox(
 
 # Contenido
 if "Inicio" in add_selectbox:
-  inicio()
+  ejecutar_inicio()
 if "Semana 01" in add_selectbox:
   subprocess.call(['python', 'semana-01.py'])
 elif "Semana 01" in add_selectbox:
