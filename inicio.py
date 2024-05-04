@@ -1,4 +1,4 @@
 import streamlit as st
 
-def ejecutar_innicio():
+def ejecutar_inicio():
   st.write(f"Este es el inicio")
