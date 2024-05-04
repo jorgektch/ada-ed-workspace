@@ -1,5 +1,6 @@
 import streamlit as st
 import subprocess
+from inicio import *
 
 # Aside menu
 selectbox_values = ["Inicio",
@@ -20,7 +21,7 @@ add_selectbox = st.sidebar.selectbox(
 
 # Contenido
 if "Inicio" in add_selectbox:
-  subprocess.call(['python', 'inicio.py'])
+  inicio()
 if "Semana 01" in add_selectbox:
   subprocess.call(['python', 'semana-01.py'])
 elif "Semana 01" in add_selectbox:
