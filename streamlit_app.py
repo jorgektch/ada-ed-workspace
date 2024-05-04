@@ -14,6 +14,7 @@ selectbox_values = ["Inicio",
                     "Semana 03",
                     "Semana 04",
                     "Semana 05",
+                    "Semana 06",
                     ]
 
 default_ix = selectbox_values.index("Semana 05")
@@ -38,3 +39,5 @@ elif "Semana 04" in add_selectbox:
   ejecutar_semana_04()
 elif "Semana 05" in add_selectbox:
   ejecutar_semana_05()
+elif "Semana 06" in add_selectbox:
+  ejecutar_semana_06()
