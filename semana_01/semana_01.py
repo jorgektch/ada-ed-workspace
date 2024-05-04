@@ -6,7 +6,7 @@ from graficas import *
 
 def ejecutar():
   st.header(f"Semana 01")
-  ejecutar_enunciado()
+  enunciado.ejecutar_enunciado()
   ejecutar_implementacion()
   ejecutar_analisis()
   ejecutar_graficas()
