@@ -1,6 +1,6 @@
 import streamlit as st
 
-# Using object notation
+# Aside menu
 selectbox_values = ["Inicio",
                     "Semana 01",
                     "Semana 02",
@@ -17,3 +17,12 @@ add_selectbox = st.sidebar.selectbox(
           index = default_ix,
 )
 
+# Contenido
+if "Semana 01" in add_selectbox:
+  st.write(f"S1")
+elif "Semana 01" in add_selectbox:
+  st.write(f"S2")
+else:
+  st.write(f"Another")
+
+        
