@@ -1,6 +1,7 @@
 import streamlit as st
 
 def ejecutar_semana_01_analisis():
+  st.subheader("Análisis")
   st.latex(r'''
       a + ar + a r^2 + a r^3 + \cdots + a r^{n-1} =
       \sum_{k=0}^{n-1} ar^k =
