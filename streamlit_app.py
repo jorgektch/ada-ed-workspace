@@ -1,7 +1,7 @@
 import streamlit as st
 import subprocess
 from inicio import *
-import semana_01.semana_01
+from semana_01.semana_01 import *
 from semana_02 import *
 from semana_03 import *
 from semana_04 import *
