@@ -25,6 +25,7 @@ add_selectbox = st.sidebar.selectbox(
 )
 
 # Contenido
+st.title('Curso: Análisis y diseño de algoritmos')
 if "Inicio" in add_selectbox:
   ejecutar_inicio()
 if "Semana 01" in add_selectbox:
