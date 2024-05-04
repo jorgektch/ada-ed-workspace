@@ -23,10 +23,12 @@ add_selectbox = st.sidebar.selectbox(
 if "Inicio" in add_selectbox:
   ejecutar_inicio()
 if "Semana 01" in add_selectbox:
-  subprocess.call(['python', 'semana-01.py'])
-elif "Semana 01" in add_selectbox:
-  subprocess.call(['python', 'semana-02.py'])
-else:
-  st.write(f"Another")
-
-        
+  ejecutar_semana_01()
+elif "Semana 02" in add_selectbox:
+  ejecutar_semana_02()
+elif "Semana 03" in add_selectbox:
+  ejecutar_semana_03()
+elif "Semana 04" in add_selectbox:
+  ejecutar_semana_04()
+elif "Semana 05" in add_selectbox:
+  ejecutar_semana_05()
