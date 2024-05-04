@@ -1,6 +1,6 @@
 import streamlit as st
 
-def ejecutar_semana_01_analisis():
+def ejecutar_analisis():
   st.subheader("Análisis")
   st.latex(r'''
       a + ar + a r^2 + a r^3 + \cdots + a r^{n-1} =
