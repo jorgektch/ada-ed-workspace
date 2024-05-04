@@ -1,5 +1,5 @@
 import streamlit as st
 
-def ejecutar_semana_01_enunciado():
+def ejecutar_enunciado():
   st.subheader("Enunciado")
   st.write("Este es el enunciado")
