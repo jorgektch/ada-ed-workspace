@@ -1,5 +1,5 @@
 import streamlit as st
-from .grupos import *
+from .grupo import *
 from .metodologia import *
 from .tecnologias import *
 
