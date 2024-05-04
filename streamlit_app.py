@@ -18,7 +18,7 @@ add_selectbox = st.sidebar.selectbox(
 )
 
 values2 = ['Select', 10, 15, 20, 25, 30]
-default_ix2 = values.index(10)
+default_ix2 = values2.index(10)
 if values2 == 'Select':
     st.warning("Choose the integers from the list in the dropdown")
 else:
