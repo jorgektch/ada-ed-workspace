@@ -1,4 +1,4 @@
-import streamlit as lt
+import streamlit as st
 
 def ejecutar_semana_01_latex():
   st.latex(r'''
