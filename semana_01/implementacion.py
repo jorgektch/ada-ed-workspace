@@ -1,6 +1,6 @@
 import streamlit as st
 
-def ejecutar_semana_01_implementacion():
+def ejecutar_implementacion():
   st.subheader("Implementación")
 
   code = '''def hello():
