@@ -6,6 +6,7 @@ from semana_02.semana_02 import *
 from semana_03.semana_03 import *
 from semana_04.semana_04 import *
 from semana_05.semana_05 import *
+from semana_06.semana_06 import *
 
 # Aside menu
 selectbox_values = ["Inicio",
