@@ -2,7 +2,7 @@ import streamlit as st
 import matplotlib.pyplot as plt
 import numpy as np
 
-def ejecutar_semana_01_graficas():
+def ejecutar_graficas():
   st.subheader("Gráficas")
   arr = np.random.normal(1, 1, size=100)
   fig, ax = plt.subplots()
