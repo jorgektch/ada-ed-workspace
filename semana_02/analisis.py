@@ -147,7 +147,7 @@ def ejecutar_analisis2():
       5n + 3 \leq 6n \text{, para todo } n \geq 3 \\
       ''')
   
-  def ejecutar_analisis3():
+def ejecutar_analisis3():
   st.subheader("Análisis")
   st.write("Analizando el algoritmo")
   st.markdown("**Peor caso:** Que n sea impar")
