@@ -5,7 +5,7 @@ def ejecutar_analisis():
   st.write("Analizando el algoritmo")
   data={
     "Operacion": ["int count = 0", "int i = 0", "i < arr.length", "i++", "sum++", "if(arr[i])", "count++", "return count >= 2"],
-    "Número de operaciones": ["2", "2", "n+1", "2 * n = 2n", "2n", "2", "2"],
+    "Número de operaciones": ["2", "2", "n+1", "2 * n = 2n", "2 * n = 2n", "2n", "2", "2"],
     "¿Por qué?": [
                   "Declaración y asignación", 
                   "Declaración y asignación", 
