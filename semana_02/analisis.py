@@ -204,7 +204,7 @@ def ejecutar_analisis4():
       T(n) = 5n^2 + 6n + 3
       ''')
   st.markdown("**Suposición:** BigO es O(n^2)")
-  st.markdonw("**Sea:**")
+  st.markdown("**Sea:**")
   st.latex(r'''
       5n^2 \leq 5n^2 \text{...(1)} \\
       6n \leq 6n^2 \text{...(2)} \\
