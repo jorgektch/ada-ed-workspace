@@ -24,8 +24,8 @@ def ejecutar_analisis():
       ''')
   st.markdown("**Suposición:** BigO es O(n)")
   st.latex(r'''
-      \text{Hallar una constante c y un valor} n_0 \text{tal que:} \\
-      T(n) \leq cn \text{, para todo} n \geq n_0
+      \text{Hallar una constante c y un valor } n_0 \text{ tal que:} \\
+      T(n) \leq cn \text{, para todo } n \geq n_0
       ''')
   st.markdown("**Con c=6:**")
   st.latex(r'''
