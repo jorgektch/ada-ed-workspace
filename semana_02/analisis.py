@@ -43,6 +43,7 @@ def ejecutar_analisis10():
 def ejecutar_analisis11():
   st.subheader("Análisis")
   st.write("Analizando el algoritmo")
+  st.markdown("**Peor caso:** No hay valores verdaderos")
   data={
     "Operacion": ["int i = 0", "i < arr.length", "i++", "int j = i + 1", "j < arr.length", "j++", "if(arr[i] && arr[j])", "return true", "return false"],
     "Número de operaciones": ["2", "n+1", "2 * n = 2n", "3 * (n - 1) = 3n - 3", "n * (n - 1) / 2", "2 * n * (n - 1) / 2", "3 * n * (n - 1) / 2", "0", "1"],
@@ -59,24 +60,13 @@ def ejecutar_analisis11():
   }
   df=pd.DataFrame(data)
   st.table(df)
-  st.markdown("**Peor caso:** No hay valores verdaderos")
+  st.markdown("**Por lo tanto el T(n):**")
   st.latex(r'''
-      T(n) = 5n + 9
-      ''')
-  st.markdown("**Suposición:**")
-  st.latex(r'''
-      \text{Hallar una constante c y un valor } n_0 \text{ tal que:} \\
-      T(n) \leq cn \text{, para todo } n \geq n_0
-      ''')
-  st.markdown("**Con c=6:**")
-  st.latex(r'''
-      5n + 9 \leq 6n \\
-      9 \leq n
-      ''')
-  st.write("Se obtiene:")
-  st.latex(r'''c = 6 \text{ y } n_0 = 3''')
-  st.markdown("**T(n) = O(n):**")
-  st.latex(r'''
-      \text{Dado un } c = 6 \text{ para todo } n \geq 9: \\
-      5n + 9 \leq 6n \text{, para todo } n \geq 9
+      T(n) = 3n^2 + 3n + 1 \\
+      \text{Demostrando que } 3n^2 + 3n + 1 \text{ es } O(n^2): \\
+      3n^2 \leq 3n^2 \\
+      3n \leq 3n^2 \text{ para } n \geq 1 \\
+      1 \leq n^2 \\
+      3n^2 + 3n + 1 \leq 7n^2 \\
+      c=7 \text{ y } n=1
       ''')
