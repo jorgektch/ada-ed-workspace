@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-def ejecutar_analisis11():
+def ejecutar_analisis10():
   st.subheader("Análisis")
   st.write("Analizando el algoritmo")
   data={
@@ -40,7 +40,7 @@ def ejecutar_analisis11():
       5n + 9 \leq 6n \text{, para todo } n \geq 9
       ''')
 
-def ejecutar_analisis12():
+def ejecutar_analisis11():
   st.subheader("Análisis")
   st.write("Analizando el algoritmo")
   data={
