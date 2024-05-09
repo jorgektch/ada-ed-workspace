@@ -176,8 +176,8 @@ def ejecutar_analisis3():
       8 + \frac{n}{2} + 2n \leq 3n \\
       8 + \frac{n}{2} \leq n \\
       8 \leq \frac{n}{2} \\
-      16 \leq \frac{n}{2} \\
+      16 \leq n \\
       \text{ } \\
-      \text{Un valor válido para } n_0 \text{ sería: } 4 \\
+      \text{Un valor válido para } n_0 \text{ sería: } 17 \\
       ''')
   
