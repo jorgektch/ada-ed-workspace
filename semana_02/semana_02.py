@@ -12,4 +12,5 @@ def ejecutar_semana_02():
   ejecutar_implementacion11()
   ejecutar_analisis11()
   ejecutar_implementacion12()
+  ejecutar_analisis12()
   ejecutar_graficas()
