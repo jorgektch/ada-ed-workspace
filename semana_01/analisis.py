@@ -1,3 +1,5 @@
+import streamlit as st
+import pandas as pd
 def ejecutar_analisis():
   st.subheader("Análisis")
   st.write("Analizando el algoritmo")
