@@ -16,3 +16,6 @@ def ejecutar_semana_02():
   ejecutar_enunciado2()
   ejecutar_implementacion2()
   ejecutar_analisis2()
+  ejecutar_enunciado3()
+  ejecutar_implementacion3()
+  ejecutar_analisis3()
