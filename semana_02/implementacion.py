@@ -1,6 +1,6 @@
 import streamlit as st
 
-def ejecutar_implementacion10():
+def ejecutar_implementacion1_0():
   st.subheader("Algoritmo versión 1")
 
   code = '''public boolean hasTwoTrueValues( boolean [ ] arr ){
@@ -14,7 +14,7 @@ def ejecutar_implementacion10():
  }'''
   st.code(code, language='java')
 
-def ejecutar_implementacion11():
+def ejecutar_implementacion1_1():
   st.subheader("Algoritmo versión 2")
 
   code = '''public boolean hasTwoTrueValues( boolean [ ] arr ){
@@ -27,7 +27,7 @@ def ejecutar_implementacion11():
  }'''
   st.code(code, language='java')
 
-def ejecutar_implementacion12():
+def ejecutar_implementacion1_2():
   st.subheader("Algoritmo versión 3")
 
   code = '''public boolean hasTwoTrueValues( boolean [ ] arr ){
