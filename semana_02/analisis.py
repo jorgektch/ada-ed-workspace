@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-def ejecutar_analisis10():
+def ejecutar_analisis1_0():
   st.subheader("Análisis")
   st.write("Analizando el algoritmo")
   data={
@@ -40,7 +40,7 @@ def ejecutar_analisis10():
       5n + 9 \leq 6n \text{, para todo } n \geq 9
       ''')
 
-def ejecutar_analisis11():
+def ejecutar_analisis1_1():
   st.subheader("Análisis")
   st.write("Analizando el algoritmo")
   st.markdown("**Peor caso:** No hay valores verdaderos")
@@ -73,7 +73,7 @@ def ejecutar_analisis11():
       c=7 \text{ y } n=1
       ''')
   
-def ejecutar_analisis12():
+def ejecutar_analisis1_2():
   st.subheader("Análisis")
   st.write("Analizando el algoritmo")
   data={
