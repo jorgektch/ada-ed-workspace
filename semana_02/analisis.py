@@ -108,3 +108,76 @@ def ejecutar_analisis1_2():
       3 \leq n \\
       \text{Un valor válido para } n_0 \text{ sería: } 4 \\
       ''')
+  
+def ejecutar_analisis2():
+  st.subheader("Análisis")
+  st.write("Analizando el algoritmo")
+  data={
+    "Operacion": ["int i = 0", "i < n", "i++", "sum++"],
+    "Número de operaciones": ["2", "n + 1", "2n", "2n"],
+    "¿Por qué?": [
+                  "Declaración y asignación",
+                  "Se realiza una comparación. La acción se repite n veces. Se realiza una vez más como falsa", 
+                  "Acción suma y asignación. Se repite n veces.", 
+                  "Acción suma y asignación. Se repite n veces."]
+  }
+  df=pd.DataFrame(data)
+  st.table(df)
+  st.markdown("**El T(n) es:**")
+  st.latex(r'''
+      T(n) = 5n + 3
+      ''')
+  st.markdown("**Suposición:** BigO es O(n)")
+  st.latex(r'''
+      \text{Hallar una cosntante c u valor } n_0 \text{tal que: }\\
+      T(n) \leq cn \text{, para todo } n \geq n_0 \\
+      ''')
+  st.markdown("**Con c = 6:**")
+  st.latex(r'''
+      5n + 3 \leq 6n \\
+      3 \leq n \\
+      ''')
+  st.markdown("**Se obtiene:**")
+  st.latex(r'''
+      c = 6 \text{ y } n_0 = 3
+      ''')
+  st.markdown("**T(n) = O(n):**")
+  st.latex(r'''
+      \text{Dado un c= 6 para todo } n \geq 3 \\
+      5n + 3 \leq 6n \text{, para todo } n \geq 3 \\
+      ''')
+  
+  def ejecutar_analisis3():
+  st.subheader("Análisis")
+  st.write("Analizando el algoritmo")
+  st.markdown("**Peor caso:** Que n sea impar")
+  data={
+    "Operacion": ["int i = 0", "i < n", "i+=2", "sum++"],
+    "Número de operaciones": ["2", "2 + n/2", "n + 2", "n + 2"],
+    "¿Por qué?": [
+                  "Declaración y asignación",
+                  "Se realiza una comparación. La acción se repite (n/2 - 0 + 1) veces. Se hace una vez más como falsa si n es impar", 
+                  "Acción suma y asignación. Se repite (n/2 - 0 + 1) veces.", 
+                  "Acción suma y asignación. Se repite (n/2 - 0 + 1) veces por el bucle."]
+  }
+  df=pd.DataFrame(data)
+  st.table(df)
+  st.markdown("**El T(n) es:**")
+  st.latex(r'''
+      T(n) = 8 + n/2 + 2n
+      ''')
+  st.markdown("**Suposición:** BigO es O(n)")
+  st.latex(r'''
+      \text{Hallar una cosntante c u valor } n_0 \text{tal que: }\\
+      T(n) \leq cn \text{, para todo } n \geq n_0 \\
+      ''')
+  st.markdown("**Escogemos c = 3:**")
+  st.latex(r'''
+      8 + n/2 + 2n \leq 3n \\
+      8 + n/2 \leq n \\
+      8 \leq n/2 \\
+      16 \leq n/2 \\
+      \text{ } \\
+      \text{Un valor válido para } n_0 \text{ sería: } 4 \\
+      ''')
+  
