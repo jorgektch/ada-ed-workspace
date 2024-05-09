@@ -99,16 +99,12 @@ def ejecutar_analisis12():
       ''')
   st.markdown("**Suposición:** El BigO es O(n)")
   st.latex(r'''
-      \begin{flushleft}
       \text{Hallar una cosntante c u valor } n_0 \text{tal que: }\\
-      \end{flushleft}
       T(n) \leq cn \text{, para todo } n \geq n_0 \\
       ''')
   st.markdown("**Escogemos c = 11: **")
   st.latex(r'''
       10n + 3 \leq 11n \\
       3 \leq n \\
-      \begin{flushleft}
       \text{Un valor válido para } n_0 \text{ sería: } 4 \\
-      \end{flushleft}
       ''')
