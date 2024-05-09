@@ -33,9 +33,9 @@ def ejecutar_analisis():
       9 \leq n
       ''')
   st.write("Se obtiene:")
-  st.latex(r'''c = 6 y n_0 = 3''')
+  st.latex(r'''c = 6 \text{ y } n_0 = 3''')
   st.markdown("**T(n) = O(n):**")
   st.latex(r'''
-      Dado un c = 6 para todo n \geq 9: \\
-      5n + 9 \leq 6n, para todo n \geq 9
+      \text{Dado un } c = 6 \text{ para todo } n \geq 9: \\
+      5n + 9 \leq 6n \text{, para todo } n \geq 9
       ''')
