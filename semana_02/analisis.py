@@ -18,8 +18,24 @@ def ejecutar_analisis():
   }
   df=pd.DataFrame(data)
   st.table(df)
+  st.markdown("**El T(n) es:**")
   st.latex(r'''
-      a + ar + a r^2 + a r^3 + \cdots + a r^{n-1} =
-      \sum_{k=0}^{n-1} ar^k =
-      a \left(\frac{1-r^{n}}{1-r}\right)
+      T(n) = 5n + 9
+      ''')
+  st.markdown("**Suposición:** BigO es O(n)")
+  st.latex(r'''
+      Hallar una constante c y un valor n_0 tal que: \\
+      T(n) \leq cn, para todo n \geq n_0
+      ''')
+  st.markdown("**Con c=6:**")
+  st.latex(r'''
+      5n + 9 \leq 6n \\
+      9 \leq n
+      ''')
+  st.write("Se obtiene:")
+  st.latex(r'''c = 6 y n_0 = 3''')
+  st.markdown("**T(n) = O(n):**")
+  st.latex(r'''
+      Dado un c = 6 para todo n \geq 9: \\
+      5n + 9 \leq 6n, para todo n \geq 9
       ''')
