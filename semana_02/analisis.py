@@ -62,9 +62,9 @@ def ejecutar_analisis11():
   st.table(df)
   st.markdown("**Por lo tanto el T(n):**")
   st.latex(r'''
-      T(n) = 3n^2 + 3n + 1 \\ \\
-      \text{Demostrando que } 3n^2 + 3n + 1 \text{ es } O(n^2): \\ \\
-      3n^2 \leq 3n^2 \\
+      T(n) = 3n^2 + 3n + 1 \\
+      \\vspace{1cm} \text{Demostrando que } 3n^2 + 3n + 1 \text{ es } O(n^2): \\
+      \\vspace{1cm}3n^2 \leq 3n^2 \\
       3n \leq 3n^2 \text{ para } n \geq 1 \\
       1 \leq n^2 \\
       3n^2 + 3n + 1 \leq 7n^2 \\
