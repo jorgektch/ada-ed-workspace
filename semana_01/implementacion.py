@@ -1,7 +1,7 @@
 import streamlit as st
 
 def ejecutar_implementacion():
-  st.subheader("Implementación")
+  st.subheader("Algoritmo")
 
   code = '''public boolean hasTwoTrueValues( boolean [ ] arr ){
 	int count = 0;
