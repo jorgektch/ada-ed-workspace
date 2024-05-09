@@ -164,7 +164,7 @@ def ejecutar_analisis3():
   st.table(df)
   st.markdown("**El T(n) es:**")
   st.latex(r'''
-      T(n) = 8 + n/2 + 2n
+      T(n) = 8 + \frac{n}{2} + 2n
       ''')
   st.markdown("**Suposición:** BigO es O(n)")
   st.latex(r'''
@@ -173,10 +173,10 @@ def ejecutar_analisis3():
       ''')
   st.markdown("**Escogemos c = 3:**")
   st.latex(r'''
-      8 + n/2 + 2n \leq 3n \\
-      8 + n/2 \leq n \\
-      8 \leq n/2 \\
-      16 \leq n/2 \\
+      8 + \frac{n}{2} + 2n \leq 3n \\
+      8 + \frac{n}{2} \leq n \\
+      8 \leq \frac{n}{2} \\
+      16 \leq \frac{n}{2} \\
       \text{ } \\
       \text{Un valor válido para } n_0 \text{ sería: } 4 \\
       ''')
