@@ -40,4 +40,16 @@ def ejecutar_implementacion1_2():
  }'''
   st.code(code, language='java')
 
+def ejecutar_implementacion2():
 
+  code = '''for( int i = 0; i < n; i++ )
+	sum++;
+ '''
+  st.code(code, language='java')
+
+def ejecutar_implementacion3():
+
+  code = '''for( int i = 0; i < n; i+=2 )
+	sum++;
+ '''
+  st.code(code, language='java')
