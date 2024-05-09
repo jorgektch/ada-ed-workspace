@@ -53,3 +53,21 @@ def ejecutar_implementacion3():
 	sum++;
  '''
   st.code(code, language='java')
+
+def ejecutar_implementacion4():
+
+  code = '''for( int i = 0; i < n; i++ )
+	for( int j = 0; j < n; j++ )
+		sum++;
+ '''
+  st.code(code, language='java')
+
+def ejecutar_implementacion5():
+
+  code = '''for( int i = 0; i < n; i++)
+	sum++
+for( int j = 0; j < n; j++)
+	sum++
+
+ '''
+  st.code(code, language='java')
