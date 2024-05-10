@@ -18,7 +18,7 @@ selectbox_values = ["Inicio",
                     "Semana 06",
                     ]
 
-default_ix = selectbox_values.index("Semana 05")
+default_ix = selectbox_values.index("Semana 06")
 
 add_selectbox = st.sidebar.selectbox(
           "Semana de clases",
@@ -28,6 +28,7 @@ add_selectbox = st.sidebar.selectbox(
 
 # Contenido
 st.title('Curso: Análisis y diseño de algoritmos')
+st.divider()
 if "Inicio" in add_selectbox:
   ejecutar_inicio()
 if "Semana 01" in add_selectbox:
