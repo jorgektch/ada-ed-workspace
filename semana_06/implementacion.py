@@ -101,9 +101,9 @@ def ejecutar_implementacion():
                       print(0)
 
                   if(value < nodo.value):
-                      nodo.left = self.searchNodo(nodo.left,value)
+                      self.searchNodo(nodo.left,value)
                   elif(value > nodo.value):
-                      nodo.right = self.searchNodo(nodo.right,value)
+                      self.searchNodo(nodo.right,value)
                   else:
                       print(nodo.repetitions)
 

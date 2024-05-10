@@ -107,9 +107,6 @@ def ejecutar_analisis():
                       nodo.left = self.insert(nodo.left,value)
                   elif(value > nodo.value):
                       nodo.right = self.insert(nodo.right,value)
-                  else:
-                      nodo.repetitions+=1
-                      return nodo
 
                   nodo.height = 1 + max(self.obtenerAltura(nodo.left), 
                                     self.obtenerAltura(nodo.right)) 
@@ -133,6 +130,72 @@ def ejecutar_analisis():
                   return nodo
             ''')
     
+  with st.container(border = True):
+    st.info("**Analisis T(n) y BigO**")
+    oper = ["if not nodo","return Nodo(value)","if value < nodo.value","nodo.left = self.insert(nodo.left,value)","elif value > nodo.value","nodo.right = self.insert(nodo.right,value)","nodo.height = 1 + max(self.obtenerAltura(nodo.left), self.obtenerAltura(nodo.right))","balance = self.obtenerBalanceo(nodo)"]
+    oper.append("if balance > 1 and value < nodo.left.value")
+    oper.append("return self.rotacionDerecha(nodo)")
+    oper.append("if balance < -1 and value > nodo.right.value")
+    oper.append("return self.rotacionIzquierda(nodo)")
+    oper.append("if balance > 1 and value > nodo.left.value")
+    oper.append("nodo.left = self.rotacionIzquierda(nodo.left)")
+    oper.append("return self.rotacionDerecha(nodo)")
+    oper.append("if balance < -1 and value < nodo.right.value")
+    oper.append("nodo.right = self.rotacionDerecha(nodo.right)")
+    oper.append("return self.rotacionIzquierda(nodo) ")
+    oper.append("return nodo")
+    pasos = ["2","2","3","4","3","4","8","2","6","2","6","2","6","4","2","6","4","2","1"]
+    exp = ["Operador negacion y Condicionak","Llamado a constructor Nodo y Llamado a funcion retorno","Acceso, Operacion menor que y Condicional","Llamado funcion insert, Acceso, Asignacion y Acceso"]
+    exp.append("Acceso, Operador mayor que y Condicional")
+    exp.append("Llamaado funcion insert, Acceso, Asignacion y Acceso")
+    exp.append("Llamado funcion max, Doble llamado funcion obtenerAltura, Doble acceso, Suma y Acceso")
+    exp.append("Llamado funcion obtenerBalance y Asignacion")
+    exp.append("Operador mayor que, Operador and, Operador menor que, Doble acceso y Condicional")
+    exp.append("Llamado funcion rotacionDerecha y Llamado funcion retorno")
+    exp.append("Operador menor que, Operador and, Operador mayor que, Doble acceso y Condicional")
+    exp.append("Llamado funcion rotacionIzquierda y Llamado funcion retorno")
+    exp.append("Operador mayor que, Operador and, Operador mayor que, Doble acceso y Condicional")
+    exp.append("Llamando funcion rotacionIzquierda, Acceso, Asignacion y Acceso")
+    exp.append("Llamado funcion rotacionDerecha, Llamado funcion retorno")
+    exp.append("Operador menor que, Operador and, Operador menor que, Doble acceso y Condicional")
+    exp.append("Llamando funcion rotacionDerecha, Acceso, Asignacion y Acceso")
+    exp.append("Llamado funcion rotacionIzquierda, Llamado funcion retorno")
+    exp.append("Llamado funcion retorno")
+    data = {
+        "Operaciones" : oper,
+        "Pasos": pasos,
+        "Fundamento": exp
+    }   
+    df = pd.DataFrame(data)
+    st.table(df)
+    st.write("**Peor caso:** \n - Nos encontramos en un arbol binario perfecto")
+    st.write("Definicion recursiva:")
+    st.latex(r'''
+             T(n) = \begin{cases} 4 &,\ Si\quad n < 1\\ 50 + T(n/2) &,\ Si\quad n \geq 1 \end{cases}
+             ''')
+    st.write("Definicion no recursiva:")
+    st.latex(r'''
+             \begin{align*}
+              T(n) &= 50 + T(n/2) = 50 + (50 + T((n/2)/2)) \\
+              T(n) &= 100 + T(n/4) = 100 + (50 + T((n/4)/2)) \\
+              T(n) &= 150 + T(n/8) = \dots \\
+              T(n) &= 50i + T(n/2^i)
+             \end{align*}
+             ''')
+    st.write("Finaliza cuando:")
+    st.latex(r'''
+            \begin{align*}
+              n/2^i &< 1 \\
+                  n &< 2^i \\
+                log_2n &< i  \\
+                \phantom{.} \\
+                i = log_2n &+ 1
+            \end{align*}\\
+             \phantom{.} \\
+             T(n) = 50log_2n + 54 \equiv O(logn)
+             ''')
+
+
   st.markdown('''
               Realizar la busuqeda dentro de esta arbol se hara usando parte de la logica seguida en la
               insercion. Nos desplazaremos por el arbol mediante las comparaciones hechas con el node padre
@@ -144,16 +207,55 @@ def ejecutar_analisis():
             def searchNodo(self,nodo,value):
             
               if not nodo:
-                  print(0)
+                return
 
               if(value < nodo.value):
-                  nodo.left = self.searchNodo(nodo.left,value)
+                  self.searchNodo(nodo.left,value)
               elif(value > nodo.value):
-                  nodo.right = self.searchNodo(nodo.right,value)
-              else:
-                print(nodo.repetitions)
+                  self.searchNodo(nodo.right,value)
+
             ''')
   
+  with st.container(border = True):
+    st.info("**Analisis T(n) y BigO**")
+    oper = ["if not nodo","return","if value < nodo.value","self.searchNodo(nodo.left,value)","elif(value > nodo.value)","self.searchNodo(nodo.right,value)"]
+    pasos = ["2","1","3","2","3","2"]
+    exp = ["Operador negador y Condicional","Llamada funcion retorno","Operacion menor que, Acceso y Condicional","Llamado a funcion searchNodo y Acceso","Operador mayor que, Acceso y Condicional","Llamado a funcion searchNodo y Acceso"]
+    data = {
+        "Operaciones" : oper,
+        "Pasos": pasos,
+        "Fundamento": exp
+    }   
+    df = pd.DataFrame(data)
+    st.table(df)
+    st.write("**Peor caso:** \n - Nos encontramos en un arbol binario perfecto \n - El elemento que se busca no se encuentra en el arbol")
+    st.write("Definicion recursiva:")
+    st.latex(r'''
+             T(n) = \begin{cases} 3 &,\ Si\quad n < 1\\ 5 + T(n/2) &,\ Si\quad n \geq 1 \end{cases}
+             ''')
+    st.write("Definicion no recursiva:")
+    st.latex(r'''
+             \begin{align*}
+              T(n) &= 5 + T(n/2) = 5 + (5 + T((n/2)/2)) \\
+              T(n) &= 10 + T(n/4) = 10 + (5 + T((n/4)/2)) \\
+              T(n) &= 15 + T(n/8) = \dots \\
+              T(n) &= 5i + T(n/2^i)
+             \end{align*}
+             ''')
+    st.write("Finaliza cuando:")
+    st.latex(r'''
+            \begin{align*}
+              n/2^i &< 1 \\
+                  n &< 2^i \\
+                log_2n &< i  \\
+                \phantom{.} \\
+                i = log_2n &+ 1
+            \end{align*}\\
+             \phantom{.} \\
+             T(n) = 5log_2n + 8 \equiv O(logn)
+             ''')
+
+
   st.markdown('''
               Para obtener un arreglo de los elementos en orden creciente, haremos uso
               de un recorrido prefijo en el arbol.
@@ -163,7 +265,6 @@ def ejecutar_analisis():
             def imprimirArbol(self,raiz):
               if raiz:
                   self.imprimirArbol(raiz.left)
-                  print(str(raiz.value))
                   self.imprimirArbol(raiz.right)
             ''')
     
@@ -179,7 +280,7 @@ def ejecutar_analisis():
     }   
     df = pd.DataFrame(data)
     st.table(df)
-    st.write("**Peor caso:** Nos encontramos en un arbol binario perfecto")
+    st.write("**Peor caso:** \n - Nos encontramos en un arbol binario perfecto")
     st.write("Definicion recursiva:")
     st.latex(r'''
              T(n) = \begin{cases} 1 &,\ Si\quad n = 0\\ 5 + T(n/2) + T(n/2) &,\ Si\quad n > 0 \end{cases}
@@ -194,8 +295,10 @@ def ejecutar_analisis():
              \bullet \ B = 2\\
              \bullet \ C = 0\\
              \bullet \ log_B(A) = log_2(2) = 1\\ \phantom{.} \\
-             log_B(A) > C \Rightarrow \ T(n) \equiv O(n ^{log_B(A)}) \\
-             T(n) \equiv O(n)
+             \begin{align*}
+             log_B(A) > C \Rightarrow \ T(n) &\equiv O(n ^{log_B(A)}) \\
+             T(n) &\equiv O(n)
+             \end{align*}
              ''')
 
   hide_img_fs = '''
