@@ -19,3 +19,19 @@ def ejecutar_enunciado4():
 def ejecutar_enunciado5():
   st.subheader("Ejercicio 5.26.4")
   st.write("Calcular el BigO del siguiente algoritmo.")
+
+def ejecutar_enunciado6():
+  st.subheader("Ejercicio 5.26.5")
+  st.write("Calcular el BigO del siguiente algoritmo.")
+
+def ejecutar_enunciado7():
+  st.subheader("Ejercicio 5.26.6")
+  st.write("Calcular el BigO del siguiente algoritmo.")
+
+def ejecutar_enunciado8():
+  st.subheader("Ejercicio 5.26.7")
+  st.write("Calcular el BigO del siguiente algoritmo.")
+
+def ejecutar_enunciado9():
+  st.subheader("Ejercicio 5.26.8")
+  st.write("Calcular el BigO del siguiente algoritmo.")
