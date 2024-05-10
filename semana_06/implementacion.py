@@ -56,10 +56,10 @@ def ejecutar_implementacion():
               def rotacionIzquierda(self, z): 
             
                   y = z.right 
-                  T2 = y.left 
+                  son = y.left 
             
                   y.left = z 
-                  z.right = T2 
+                  z.right = son 
             
                   z.height = 1 + max(self.obtenerAltura(z.left), 
                                   self.obtenerAltura(z.right)) 
@@ -71,10 +71,10 @@ def ejecutar_implementacion():
               def rotacionDerecha(self, z): 
             
                   y = z.left 
-                  T3 = y.right 
+                  son = y.right 
             
                   y.right = z 
-                  z.left = T3 
+                  z.left = son 
             
                   z.height = 1 + max(self.obtenerAltura(z.left), 
                                   self.obtenerAltura(z.right)) 
