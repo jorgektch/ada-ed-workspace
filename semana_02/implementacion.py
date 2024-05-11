@@ -71,3 +71,35 @@ for( int j = 0; j < n; j++)
 
  '''
   st.code(code, language='java')
+
+def ejecutar_implementacion6():
+
+  code = '''for( int i = 0; i < n; i++)
+	for( int j = 0; j < n*n; j++)
+		sum++
+ '''
+  st.code(code, language='java')
+
+def ejecutar_implementacion7():
+
+  code = '''for ( int i = 0; i < n; i++ ) 			
+	for ( int j = 0; j < i; j++ ) 	
+		sum++;
+ '''
+  st.code(code, language='java')
+
+def ejecutar_implementacion8():
+
+  code = '''for ( int i = 0; i < n; i++ ) 			
+	for ( int j = 0; j < n * n; j++ )
+		for ( int k = 0; k < j; k++ ) 	
+			sum++;
+ '''
+  st.code(code, language='java')
+
+def ejecutar_implementacion9():
+
+  code = '''for (int i = 1; i < n; i = i*2)
+	sum++
+ '''
+  st.code(code, language='java')
