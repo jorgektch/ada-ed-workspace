@@ -4,5 +4,5 @@ class Nodo:
         self.value = value 
         self.left = None    
         self.right = None
-        self.repetitions = 0
+        self.repetitions = 1
         self.height = 1
