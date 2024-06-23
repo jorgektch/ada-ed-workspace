@@ -8,6 +8,7 @@ from semana_04.semana_04 import *
 from semana_05.semana_05 import *
 from semana_06.semana_06 import *
 from semana_09.semana_09 import *
+from semana_11.semana_11 import *
 
 # Aside menu
 selectbox_values = ["Inicio",
@@ -18,6 +19,7 @@ selectbox_values = ["Inicio",
                     "Semana 05",
                     "Semana 06",
                     "Semana 09",
+                    "Semana 11",
                     ]
 
 default_ix = selectbox_values.index("Semana 06")
@@ -47,3 +49,5 @@ elif "Semana 06" in add_selectbox:
   ejecutar_semana_06()
 elif "Semana 09" in add_selectbox:
   ejecutar_semana_09()
+elif "Semana 11" in add_selectbox:
+  ejecutar_semana_11()

@@ -1,6 +1,6 @@
 import streamlit as st
 
-def ejecutar_implementacion_moch2():
+def ejecutar_implementacion_silla():
   st.subheader("Implementación")
   
   with st.expander("Codigo completo"):
