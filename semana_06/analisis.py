@@ -1,9 +1,8 @@
 import streamlit as st
 import pandas as pd
 from stretch_component import stretch_component
-from streamlit_theme import st_theme
 
-def ejecutar_analisis():
+def ejecutar_analisis(theme:str):
   
   st.subheader("Análisis")
   st.markdown('''
@@ -25,8 +24,7 @@ def ejecutar_analisis():
                 debido a la siguiente estructura:
               ''')
   
-  theme = st_theme()
-  theme = theme["base"]
+
   stretch_component(30,300,6,theme,"1")
   st.markdown('''
               En este caso, a modo de muestra, haremos la implementacion de un set ordenado mediante arbol de busqueda binaria haciendo uso 

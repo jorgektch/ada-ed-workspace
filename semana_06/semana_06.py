@@ -5,15 +5,15 @@ from .analisis import *
 from .graficas import *
 from .programa import *
 
-def ejecutar_semana_06():
+def ejecutar_semana_06(theme:str):
   st.header(f"Semana 06")
   st.write("#")
   ejecutar_enunciado()
   st.write("#")
-  ejecutar_analisis()
+  ejecutar_analisis(theme)
   st.write("#")
   ejecutar_implementacion()
   st.write("#")
-  ejecutar_graficas()
+  ejecutar_graficas(theme)
   st.write("#")
   ejecutar_programa()
