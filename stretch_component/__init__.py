@@ -77,9 +77,12 @@ def my_component(name, key=None):
     return component_value
 
 
-parent_dir = os.path.dirname(os.path.abspath(__file__))
-build_dir = os.path.join(parent_dir, "frontend/build")
-component_func = components.declare_component("stretch_component", path=build_dir)
+absolute_path  = os.path.dirname(os.path.abspath(__file__))
+frontend_path = absolute_path
+component_func = components.declare_component(
+    "streamlit_js_eval",
+    path=frontend_path
+)
 
 
 def stretch_component(radius:int, speed:int, numberOfNodes: int, theme:str = "dark", key=None):
