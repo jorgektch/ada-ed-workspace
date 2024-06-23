@@ -1,5 +1,7 @@
 import streamlit as st
 import pandas as pd
+from stretch_component import stretch_component
+from streamlit_theme import st_theme
 
 def ejecutar_analisis():
   
@@ -22,9 +24,10 @@ def ejecutar_analisis():
               > Si el arbol no se encuentra balanceado, es posible que las operaciones de busqueda ocurran con complejidad O(n) en los peores casos,
                 debido a la siguiente estructura:
               ''')
-  co1,co2,co3,co4,co5 = st.columns(5)
-  with co2:
-    st.image('semana_06/skewdTree.jpg',width=400) 
+  
+  theme = st_theme()
+  theme = theme["base"]
+  stretch_component(30,300,6,theme,"1")
   st.markdown('''
               En este caso, a modo de muestra, haremos la implementacion de un set ordenado mediante arbol de busqueda binaria haciendo uso 
               de un arbol AVL para el balanceo. A diferencia de los arboles rojo-negro, los arboles AVL realizan las operaciones de rotacion
