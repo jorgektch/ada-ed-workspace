@@ -5,7 +5,7 @@ import streamlit.components.v1 as components
 absolute_path  = os.path.dirname(os.path.abspath(__file__))
 frontend_path = absolute_path
 component_func = components.declare_component(
-    "streamlit_js_eval",
+    "stretch_component",
     path=frontend_path
 )
 
