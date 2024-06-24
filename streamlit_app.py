@@ -10,8 +10,12 @@ from semana_06.semana_06 import *
 from semana_09.semana_09 import *
 from semana_11.semana_11 import *
 from streamlit_theme import st_theme
+
 theme = st_theme()
-theme = theme["base"]
+if(theme is not None):
+  theme = theme["base"]
+
+
 
 # Aside menu
 selectbox_values = ["Inicio",
