@@ -5,7 +5,7 @@ from .analisis import *
 from .graficas import *
 
 def ejecutar_semana_04():
-  st.header(f"Semana 03")
+  st.header(f"Semana 04")
 
   # Ejercicio 1
   ejecutar_enunciado1()

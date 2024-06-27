@@ -37,7 +37,7 @@ def ejecutar_enunciado9():
   st.write("Analice el siguiente código y responda. ¿Qué hace el siguiente código?")
   code = '''
     Este algoritmo multiplica dos números a y b
-Donde:
+  Donde:
 	Si b es par:
 	mimetodo(2*a,b/2) equivale a:
 		2a * b/2 = ab
@@ -48,8 +48,6 @@ Donde:
 		2a * (b-1)/2 + a = ab
     '''
   st.code(code, language='java')
-
-  st.image("enunciado9.png", caption="Enunciado 9")
 
 def ejecutar_enunciado10():
   st.subheader("Problema 10")
