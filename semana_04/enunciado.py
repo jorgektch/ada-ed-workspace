@@ -35,17 +35,33 @@ def ejecutar_enunciado8():
 def ejecutar_enunciado9():
   st.subheader("Problema 9")
   st.write("Analice el siguiente código y responda. ¿Qué hace el siguiente código?")
-  code = '''
+
+  pseudocode = '''
     Este algoritmo multiplica dos números a y b
-  Donde:
-	Si b es par:
-	mimetodo(2*a,b/2) equivale a:
-		2a * b/2 = ab
-	Si b es impar:
-	mimetodo(2*a,b/2) + a es igual a:
-		mimetodo(2*a,(b-1)/2) + a
-	Equivale a:
-		2a * (b-1)/2 + a = ab
+    Donde:
+      Si b es par:
+        mimetodo(2*a, b/2) equivale a:
+          2a * b/2 = ab
+      Si b es impar:
+        mimetodo(2*a, b/2) + a es igual a:
+          mimetodo(2*a, (b-1)/2) + a
+        Equivale a:
+          2a * (b-1)/2 + a = ab
+    '''
+  st.code(pseudocode, language='plaintext')
+
+  code = '''
+    public int mimetodo(int a, int b) {
+    int x;
+        if (b==0)
+          x=0;
+        else if (b==1)
+          x=a;
+        else if (b%2==0)
+          x = mimetodo(2*a, b/2);
+        else
+          x = mimetodo(2*a, b/2) + a;
+        return x;
     '''
   st.code(code, language='java')
 

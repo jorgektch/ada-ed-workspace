@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 
 def ejecutar_analisis1():
     st.subheader("Análisis")
@@ -14,7 +15,7 @@ def ejecutar_analisis1():
     ''')
 
     st.write("Paso 4: Derivar la función recursiva de T(n,m)")
-    st.write("Peor caso m = 1;")
+    st.write("Peor caso m = 1")
     st.latex(r'''
         \begin{align*}
         T(n,1) &= c_{2} + T(n-1,1) \\
@@ -190,12 +191,15 @@ def ejecutar_analisis6():
     st.write("Calculando el T(n)")
 
     st.write("Para esPositivo(double numero):")
+
     st.latex(r'''
+        T(n) = 
         \begin{cases} 
-        T(n) = c_{1} & \text{si } n > 0 \\ 
-        T(n) = c_{2} + T(n+1) & \text{si } n \le 0 
+        c_{1} & \text{si } n > 0 \\
+        c_{2} + T(n+1) & \text{si } n \leq 0
         \end{cases}
     ''')
+
     st.latex(r'''
         \begin{align*}
         T(n) &= c_{2} + T(n+1) \\
@@ -223,12 +227,15 @@ def ejecutar_analisis6():
     ''')
 
     st.write("Para esNegativo(double numero):")
+
     st.latex(r'''
+        T(n) = 
         \begin{cases} 
-        T(n) = c_{1} & \text{si } n \le 0 \\ 
-        T(n) = c_{2} + T(n-1) & \text{si } n > 0 
+        c_{1} & \text{si } n \leq 0 \\
+        c_{2} + T(n+1) & \text{si } n > 0
         \end{cases}
     ''')
+
     st.latex(r'''
         \begin{align*}
         T(n) &= c_{2} + T(n-1) \\
@@ -299,9 +306,10 @@ def ejecutar_analisis8():
     st.write("Paso 2: Tamaño de entrada n")
     st.write("Paso 3: Definición recursiva para T(n)")
     st.latex(r'''
-        \begin{cases}
-        T(n) = c_{1} & \text{Si } n = 0 \\
-        T(n) = c_{2} + T(n \gg 1) & \text{Si } n \geq 1
+        T(n) = 
+        \begin{cases} 
+        c_{1} & \text{Si } n = 0 \\
+        c_{2} + T(n \gg 1) & \text{Si } n \geq 1
         \end{cases}
     ''')
 
@@ -319,8 +327,35 @@ def ejecutar_analisis8():
     ''')
     st.latex(r'''
         \text{Termina cuando } n \gg i = 0 \\
+    ''')
+
+    data_16 = {
+        "Paso": [1, 2, 3, 4, 5],
+        "n": [16, 8, 4, 2, 1],
+        "n (binario)": ["10000", "1000", "100", "10", "1"],
+        "n >> i": [8, 4, 2, 1, 0],
+        "n >> i (binario)": ["1000", "100", "10", "1", "0"]
+    }
+
+    data_37 = {
+        "Paso": [1, 2, 3, 4, 5, 6],
+        "n": [37, 19, 9, 4, 2, 1],
+        "n (binario)": ["100101", "10011", "1001", "100", "10", "1"],
+        "n >> i": [19, 9, 4, 2, 1, 0],
+        "n >> i (binario)": ["10011", "1001", "100", "10", "1", "0"]
+    }
+
+    df_16 = pd.DataFrame(data_16)
+    df_37 = pd.DataFrame(data_37)
+
+    st.table(df_16)
+
+    st.table(df_37)
+
+    st.latex(r'''
         i = \log_{2}n + 1
     ''')
+
     st.latex(r'''
         \text{Reemplazamos:} \\
         T(n) = (\log_{2}n + 1)c_{2} + c_{1}
