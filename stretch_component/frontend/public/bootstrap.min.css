@@ -213,10 +213,7 @@ label {
 button {
   border-radius: 0;
 }
-button:focus {
-  outline: 1px dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-}
+
 button,
 input,
 optgroup,
@@ -232,7 +229,10 @@ input {
   overflow: visible;
 }
 button,
-select {
+select, option {
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
   text-transform: none;
 }
 [role="button"] {

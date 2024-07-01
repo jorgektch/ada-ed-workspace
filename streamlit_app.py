@@ -9,6 +9,7 @@ from semana_05.semana_05 import *
 from semana_06.semana_06 import *
 from semana_09.semana_09 import *
 from semana_11.semana_11 import *
+from algoritmos.algoritmos import *
 from streamlit_theme import st_theme
 
 theme = st_theme()
@@ -27,6 +28,7 @@ selectbox_values = ["Inicio",
                     "Semana 06",
                     "Semana 09",
                     "Semana 11",
+                    "Algoritmos"
                     ]
 
 default_ix = selectbox_values.index("Semana 06")
@@ -36,6 +38,24 @@ add_selectbox = st.sidebar.selectbox(
           selectbox_values,
           index = default_ix,
 )
+
+if "Algoritmos" in add_selectbox:
+  selectbox_valuesAlg = ["DFS",
+                      "BFS",
+                      "Ordenamiento topologico",
+                      "Prim",
+                      "Kruskal",
+                      "Dijkstra",
+                      "A* Search",
+                      ]
+
+  default_ixAlg = selectbox_valuesAlg.index("DFS")
+
+  add_selectboxAlg = st.sidebar.selectbox(
+            "Algoritmos",
+            selectbox_valuesAlg,
+            index = default_ixAlg,
+  )
 
 # Contenido
 st.title('Curso: Análisis y diseño de algoritmos')
@@ -58,3 +78,7 @@ elif "Semana 09" in add_selectbox:
   ejecutar_semana_09()
 elif "Semana 11" in add_selectbox:
   ejecutar_semana_11()
+elif "Algoritmos" in add_selectbox:
+  ejecutar_algoritmos(add_selectboxAlg, theme)
+
+

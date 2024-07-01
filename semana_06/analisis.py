@@ -24,8 +24,8 @@ def ejecutar_analisis(theme:str):
                 debido a la siguiente estructura:
               ''')
   
+  stretch_component('stretch',True,theme,30,1000,6,"5")
 
-  stretch_component(30,300,6,theme,"1")
   st.markdown('''
               En este caso, a modo de muestra, haremos la implementacion de un set ordenado mediante arbol de busqueda binaria haciendo uso 
               de un arbol AVL para el balanceo. A diferencia de los arboles rojo-negro, los arboles AVL realizan las operaciones de rotacion

@@ -83,12 +83,12 @@ function createLine(nodo:Node | undefined, timeline:Timeline, radius:number, can
   return canvas.line();
 }
 
-const StretchGraph = (props: ComponentProps) => {
-  
-  const {radius, speed, numberOfNodes, theme, key} = props.args;
+const StretchGraph = (props: any) => {
+  console.log(props);
+  const {theme, radius, speed, numberOfNode} = props;
   const lenCircle = 2*radius*Math.PI;
-  const mainWidth = 2*(numberOfNodes+5)*radius;
-  const mainHeight = 2*(numberOfNodes)*radius + radius;
+  const mainWidth = 2*(numberOfNode+5)*radius;
+  const mainHeight = 2*(numberOfNode)*radius + radius;
   
   const myTime = new Timeline().persist(true)
   myTime.on('finished', (e) => {
@@ -108,7 +108,7 @@ const StretchGraph = (props: ComponentProps) => {
       let texts:Text[] = [];
       let lines:Line[] = [];
       
-      if(numberOfNodes > 0){
+      if(numberOfNode > 0){
         nodes.push(new Node(0,2,0));
         circles.push(createCircle(nodes[0],draw,true,myTime,radius,lenCircle));
         circles[0].animate(speed,0,'after').ease('<>').stroke({dashoffset: 0});
@@ -116,7 +116,7 @@ const StretchGraph = (props: ComponentProps) => {
         texts[0].animate(speed*3/4,0,'after').ease('<>').font({opacity: 1});
       }
       
-      for(let i:number = 1;i<numberOfNodes;i++){
+      for(let i:number = 1;i<numberOfNode;i++){
         nodes.push(new Node(i,i+2,i));
         nodes[i].parent = nodes[i-1];
         lines.push(createLine(nodes[i],myTime,radius,draw));
@@ -142,4 +142,4 @@ const StretchGraph = (props: ComponentProps) => {
   );
 };
 
-export default withStreamlitConnection(StretchGraph) ;
+export default StretchGraph;
