@@ -75,6 +75,8 @@ elif "Semana 05" in add_selectbox:
 elif "Semana 06" in add_selectbox:
   ejecutar_semana_06(theme)
 elif "Semana 09" in add_selectbox:
-  ejecutar_semana_09(theme)
+  ejecutar_semana_09()
 elif "Semana 11" in add_selectbox:
   ejecutar_semana_11()
+elif "Algoritmos" in add_selectbox:
+  ejecutar_algoritmos(add_selectboxAlg, theme)
