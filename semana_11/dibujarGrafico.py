@@ -11,7 +11,7 @@ def crearDiagrama(l1, l2, l3, tittle, theme, logx=False, logy=False):
     
     ax = plt.axes()
     plt.plot(l1, l2, label='T(n)')
-    plt.plot(l1, l3, label='O(n)', linestyle='--')
+    plt.plot(l1, l3, label='O(n!)', linestyle='--')
     
     if theme == "dark":
         plt.title(tittle, color='white')

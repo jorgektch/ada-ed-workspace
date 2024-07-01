@@ -5,7 +5,7 @@ from .analisis import *
 from .graficas import *
 from .programa import *
 
-def ejecutar_semana_09():
+def ejecutar_semana_09(theme:str):
   st.header(f"Semana 09")
 
   ## Monedas
@@ -19,6 +19,8 @@ def ejecutar_semana_09():
   st.write("#")
   main_mon()
   st.write("#")
+  ejecutar_grafica_mon(theme)
+  st.write("#")
 
   ## Mochila - Maximizar por valor
   
@@ -29,6 +31,8 @@ def ejecutar_semana_09():
   ejecutar_implementacion_moch1()
   st.write("#")
   main_moch1()
+  st.write("#")
+  ejecutar_grafica_moch1(theme)
   st.write("#")
 
   ## Mochila - Maximizar por peso
@@ -41,6 +45,8 @@ def ejecutar_semana_09():
   st.write("#")
   main_moch2()
   st.write("#")
+  ejecutar_grafica_moch2(theme)
+  st.write("#")
 
   ## Mochila - Maximizar por factor valor/peso
 
@@ -52,6 +58,8 @@ def ejecutar_semana_09():
   st.write("#")
   main_moch3()
   st.write("#")
+  ejecutar_grafica_moch3(theme)
+  st.write("#")
 
   ## Estaciones
 
@@ -62,3 +70,5 @@ def ejecutar_semana_09():
   ejecutar_implementacion_est()
   st.write("#")
   main_est()
+  ejecutar_grafica_est(theme)
+  st.write("#")
